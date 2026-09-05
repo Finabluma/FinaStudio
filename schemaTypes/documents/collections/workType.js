@@ -1,12 +1,15 @@
-import { defineField, defineType } from 'sanity'
+import { defineArrayMember, defineField, defineType } from 'sanity'
 import { slugify } from '../../../lib/slugify'
 import {ProjectsIcon} from '@sanity/icons/Projects'
+import {EarthAmericasIcon} from '@sanity/icons/EarthAmericas'
 
 export const workType = defineType({
     name:'workType',
     title:'Proyectos',
     type:'document',
     icon:ProjectsIcon,
+      groups: [{ name: 'seo', title: 'SEO PAGE', icon: EarthAmericasIcon }],
+
     fields:[
         defineField({
             name:'titulo',
@@ -39,6 +42,30 @@ export const workType = defineType({
                     description: 'Texto alternativo para accesibilidad y SEO',
                 }),
             ],
+        }),
+        defineField({        
+            title: 'Content', 
+            name: 'content',
+            type: 'array', 
+            of: [{type: 'block'}]
+        }),
+        defineField({
+            name:'Etiquetas',
+            type:'array',
+            of:[
+                defineArrayMember({
+                    type:'reference',
+                    title: 'Categoría',
+                    name: 'categoria',                
+                    to: [{type: 'workCategoryType'}]
+                })
+            ]
+            
+        }),
+        defineField({
+            name: 'seo',
+            type: 'pageMetaDataType',
+            group: 'seo',
         }),
     ]
 })
