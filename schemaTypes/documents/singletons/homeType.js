@@ -39,7 +39,7 @@ export const homeType = defineType({
       }),
       defineField({
         name:'textBlocks',
-        title:'Bloque de píldoras',
+        title:'Píldoras de texto',
         type:'array',
         of:[
           defineArrayMember({
