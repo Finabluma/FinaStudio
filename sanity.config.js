@@ -28,6 +28,7 @@ export default defineConfig({
           (templateItem) =>
             templateItem.templateId !== 'homeType' &&
             templateItem.templateId !== 'seoType' &&
+            templateItem.templateId !== 'faviconType' &&
             templateItem.templateId !== 'media.tag' &&
             templateItem.templateId !== 'media.folder',
         )
