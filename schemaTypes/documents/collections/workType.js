@@ -5,7 +5,7 @@ import {EarthAmericasIcon} from '@sanity/icons/EarthAmericas'
 
 export const workType = defineType({
     name:'workType',
-    title:'Proyectos',
+    title:'Proyecto',
     type:'document',
     icon:ProjectsIcon,
       groups: [{ name: 'seo', title: 'SEO PAGE', icon: EarthAmericasIcon }],

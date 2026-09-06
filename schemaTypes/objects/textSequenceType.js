@@ -1,11 +1,11 @@
 import { defineField, defineType, defineArrayMember } from 'sanity'
-import {TextIcon} from '@sanity/icons/Text'
+import {StringIcon} from '@sanity/icons/String'
 
 export const textSequenceType = defineType({
   title: 'Secuencia de Textos',
   name: 'textSequenceType',
   type: 'object',
-  icon: TextIcon,
+  icon: StringIcon,
   fields: [
     defineField({
       name: 'prefix',

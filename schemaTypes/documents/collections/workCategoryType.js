@@ -4,7 +4,7 @@ import {HashIcon} from '@sanity/icons/Hash'
 
 export const workCategoryType = defineType({
     name:'workCategoryType',
-    title:'Categorías',
+    title:'Categoría',
     type:'document',
     icon:HashIcon,
     fields:[
